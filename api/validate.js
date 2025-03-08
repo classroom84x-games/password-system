@@ -5,7 +5,7 @@ export default function handler(req, res) {
         const { passcode } = req.body;
 
         if (generatedPasscodes.has(passcode)) {
-            generatedPasscodes.delete(passcode);
+            generatedPasscodes.delete(passcode); 
             return res.status(200).json({ valid: true });
         } else {
             return res.status(400).json({ valid: false });
